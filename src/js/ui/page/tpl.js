@@ -5,6 +5,7 @@ module.exports = {
   oninit: Page.loadContent(document.location.pathname),
   onupdate: () => {
     window.app.Router.initLinks()
+    window.dispatchEvent(new Event(window.app.Events.AJAX))
   },
   view: () => {
     return (

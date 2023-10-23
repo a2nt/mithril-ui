@@ -75,7 +75,7 @@ const Router = {
     Router.setLocation(page.title, page.link, page)
 
     // window.dispatchEvent(new Event(window.app.Events.LOADED))
-    window.dispatchEvent(new Event(window.app.Events.AJAX))
+    // window.dispatchEvent(new Event(window.app.Events.AJAX))
   },
 
   setLocation (title, url, state) {
@@ -93,7 +93,7 @@ const Router = {
 
     // set window title
     document.title = title
-        window.top.document.title // eslint-disable-line
+    // window.top.document.title // eslint-disable-line
 
     // set active links
     document.querySelectorAll('a,.a').forEach((el) => {
