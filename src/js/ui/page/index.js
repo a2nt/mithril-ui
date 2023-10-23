@@ -44,12 +44,13 @@ const Page = {
       Page.title = loaded.title
       Page.id = loaded.id
       Page.link = loaded.link
+      Page.requestlink = loaded.requestlink
       Page.CSSClass = loaded.CSSClass
 
       if (loaded.MainContent) {
-        Page.content = m.trust(loaded.MainContent)
+        Page.content = await m.trust(loaded.MainContent)
       } else if (loaded.elementalArea) {
-        Page.content = m('.elemental-area', loaded.elementalArea.elements.map((el) => {
+        Page.content = await m('.elemental-area', loaded.elementalArea.elements.map((el) => {
           const className = el.className.replaceAll('\\', '__').toLowerCase()
           return m(
             'div',
