@@ -1,0 +1,9 @@
+.dropdown {
+    &-menu {
+        display: none;
+
+        &.show {
+            display: inherit;
+        }
+    }
+}
