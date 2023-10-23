@@ -9,7 +9,8 @@ const Defaults = {
   id: 0,
   link: '/',
   title: 'Loading ...',
-  content: ''
+  content: '',
+  CSSClass: 'loading'
 }
 
 const Page = {
@@ -43,6 +44,7 @@ const Page = {
       Page.title = loaded.title
       Page.id = loaded.id
       Page.link = loaded.link
+      Page.CSSClass = loaded.CSSClass
 
       if (loaded.MainContent) {
         Page.content = m.trust(loaded.MainContent)

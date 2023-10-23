@@ -1,6 +1,5 @@
 const NAME = 'uiRouter'
 
-const Events = require('../_events')
 const Page = require('./page')
 
 const Router = {
@@ -75,8 +74,8 @@ const Router = {
   setPage (page) {
     Router.setLocation(page.title, page.link, page)
 
-    // window.dispatchEvent(new Event(Events.LOADED))
-    window.dispatchEvent(new Event(Events.AJAX))
+    // window.dispatchEvent(new Event(window.app.Events.LOADED))
+    window.dispatchEvent(new Event(window.app.Events.AJAX))
   },
 
   setLocation (title, url, state) {

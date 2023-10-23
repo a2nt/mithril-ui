@@ -8,8 +8,12 @@ module.exports = {
   },
   view: () => {
     return (
-      <main>
-        <h1>{Page.title}</h1>
+      <main class={Page.CSSClass}>
+        <div class='element page-header-element'>
+          <div class='element-container container'>
+            <h1 class='page-header'>{Page.title}</h1>
+          </div>
+        </div>
         {Page.content}
       </main>
     )
