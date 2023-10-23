@@ -2,7 +2,7 @@ const NAME = 'uiGraphql'
 
 const m = require("mithril") // eslint-disable-line
 const options = {
-  url: 'https://run.local.pro/graphql/'
+  url: '/graphql/'
 }
 
 const GraphQL = {
