@@ -2,7 +2,7 @@ const m = require("mithril") // eslint-disable-line
 const Page = require('./index')
 
 module.exports = {
-  oninit: Page.loadContent('home'),
+  oninit: Page.loadContent(document.location.pathname),
   onupdate: () => {
     window.app.Router.initLinks()
   },
