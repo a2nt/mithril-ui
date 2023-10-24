@@ -93,9 +93,17 @@ const Router = {
 
   getRelURL (url) {
     /* if (Router.isAbsURL(url)) {
-            return new URL(url, document.location.origin).pathname
-        } */
+                return new URL(url, document.location.origin).pathname
+            } */
     return new URL(url, document.location.origin).pathname
+  },
+
+  requestMethod () {
+    return document.querySelector('meta[name="http_method"]').getAttribute('content')
+  },
+
+  isFormResponse () {
+    return document.location.search.includes('SecurityID') || Router.requestMethod() === 'POST'
   },
 
   openURL: (url) => {

@@ -2,7 +2,7 @@ const basePageInfo = `fragment baseInfo on Page {
 id
 className
 link
-requestlink
+RequestLink
 urlSegment
 parentID
 title
@@ -37,14 +37,14 @@ const queries = {
         }
     }`,
   /* byID: `${basePageInfo} ${elemental} query ($id: ID) {
-          readOnePage(filter: { id: { eq: $id } }) {
-              ... baseInfo
-              ... elemental
-              MainContent
-          }
-      }`, */
+            readOnePage(filter: { id: { eq: $id } }) {
+                ... baseInfo
+                ... elemental
+                MainContent
+            }
+        }`, */
   byLink: `${basePageInfo} query ($url: String) {
-        readOnePage(filter: { url: { eq: $url } }) {
+        readOnePage(RequestLink: $url) {
             ... baseInfo
             MainContent
         }

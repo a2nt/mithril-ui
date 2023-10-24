@@ -16,6 +16,12 @@ const Defaults = {
 const Page = {
   ...Defaults,
   loadContent: async (link) => {
+    // legacy code compatibility: clean predefined content (ex. Form Submission)
+    const predefined = document.querySelector('#MainContent>.main-content')
+    if (predefined) {
+      predefined.remove()
+    }
+
     // reset Page keys
     Object.keys(Defaults).forEach(k => {
       Page[k] = Defaults[k]
@@ -44,7 +50,7 @@ const Page = {
       Page.title = loaded.title
       Page.id = loaded.id
       Page.link = loaded.link
-      Page.requestlink = loaded.requestlink
+      Page.requestlink = loaded.RequestLink
       Page.CSSClass = loaded.CSSClass
 
       if (loaded.MainContent) {
