@@ -107,9 +107,11 @@
       "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.34.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/page/index.js": 176,
       "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.34.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/page/tpl.js": 36,
       "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.34.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/queries/page.js": 884,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.34.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/router.js": 183
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.34.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/router.js": 183,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.34.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/util/getParents.js": 7
     },
     "usedIds": [
+      7,
       22,
       36,
       77,

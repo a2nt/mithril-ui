@@ -2,6 +2,7 @@ const NAME = 'uiRouter'
 
 // const Events = require('../_events')
 const Page = require('./page')
+const getParents = require('../util/getParents')
 
 const Router = {
   initLinks () {
@@ -137,12 +138,21 @@ const Router = {
 
     // set active links
     document.querySelectorAll('a,.a').forEach((el) => {
-      el.classList.remove('nav-active')
-      el.classList.remove('loading')
+      el.classList.remove('active', 'loading', 'section')
     })
 
     document.querySelectorAll(`a[href="${link}"],.a[data-href="${link}"]`).forEach((el) => {
-      el.classList.add('nav-active')
+      el.classList.add('active')
+
+      // activate nav sections
+      if (el.classList.contains('nav-link')) {
+        getParents(el, '.nav-item').forEach((navEl) => {
+          const navLink = navEl.querySelector(':scope > .nav-link')
+          if (navLink) {
+            navLink.classList.add('section')
+          }
+        })
+      }
     })
   }
 }
