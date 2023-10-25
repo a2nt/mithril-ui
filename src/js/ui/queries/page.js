@@ -23,7 +23,7 @@ elementalArea {
 }`; */
 
 const queries = {
-    menu: `${basePageInfo} query ($id: ID) {
+  menu: `${basePageInfo} query ($id: ID) {
         readPages(filter: { parentID: { eq: $id }, showInMenus: {eq:true} }) {
             nodes {
                 ... baseInfo
@@ -36,17 +36,18 @@ const queries = {
             }
         }
     }`,
-    /* byID: `${basePageInfo} ${elemental} query ($id: ID) {
+  /* byID: `${basePageInfo} ${elemental} query ($id: ID) {
             readOnePage(filter: { id: { eq: $id } }) {
                 ... baseInfo
                 ... elemental
                 MainContent
             }
         }`, */
-    byLink: `${basePageInfo} query ($url: String) {
+  byLink: `${basePageInfo} query ($url: String) {
         readOnePage(RequestLink: $url) {
             ... baseInfo
             MainContent
+            Resources
         }
     }`
 }
