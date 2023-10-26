@@ -95,8 +95,8 @@ const Router = {
 
   getRelURL (url) {
     /* if (Router.isAbsURL(url)) {
-                    return new URL(url, document.location.origin).pathname
-                } */
+                        return new URL(url, document.location.origin).pathname
+                    } */
     return new URL(url, document.location.origin).pathname
   },
 
@@ -167,6 +167,11 @@ const Router = {
         })
       }
     })
+
+    // reset focus
+    if (document.activeElement instanceof window.HTMLElement) {
+      document.activeElement.blur()
+    }
   },
 
   popState (state = null) {
