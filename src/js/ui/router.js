@@ -149,11 +149,12 @@ const Router = {
     document.title = title
     // window.top.document.title // eslint-disable-line
 
-    // set active links
-    document.querySelectorAll('a,.a').forEach((el) => {
-      el.classList.remove('active', 'loading', 'section')
-    })
+    Router.removeActiveState()
+    Router.setActiveState(link)
+  },
 
+  // set active links
+  setActiveState (link) {
     document.querySelectorAll(`a[href="${link}"],.a[data-href="${link}"]`).forEach((el) => {
       el.classList.add('active')
 
@@ -166,6 +167,12 @@ const Router = {
           }
         })
       }
+    })
+  },
+
+  removeActiveState () {
+    document.querySelectorAll('a,.a').forEach((el) => {
+      el.classList.remove('active', 'loading', 'section')
     })
 
     // reset focus

@@ -40,10 +40,15 @@ const Page = {
       if (!loaded) {
         console.warn(`${NAME}: loadContent: ${link} > NOT FOUND`)
         Page.title = 'NOT FOUND'
+        Page.content = (
+          <div class='elemental-area'>
+            <div class='element elemen--not-found'>
+              <div class='element__container container'>The page is not found</div>
+            </div>
+          </div>
+        )
 
-        if (resp.errors[0]) {
-          console.warn(resp.errors)
-        }
+        window.app.Router.removeActiveState()
         return
       }
 
