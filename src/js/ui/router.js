@@ -5,6 +5,7 @@ const Page = require('./page')
 const getParents = require('../util/getParents')
 
 const Router = {
+  FirstLoad: true,
   initLinks () {
     document.querySelectorAll('a:not(.legacy)').forEach((el) => {
       if (el.dataset[NAME]) {
@@ -94,8 +95,8 @@ const Router = {
 
   getRelURL (url) {
     /* if (Router.isAbsURL(url)) {
-                return new URL(url, document.location.origin).pathname
-            } */
+                    return new URL(url, document.location.origin).pathname
+                } */
     return new URL(url, document.location.origin).pathname
   },
 
@@ -108,7 +109,11 @@ const Router = {
   },
 
   openURL: (url) => {
-    return Page.loadContent(Router.getRelURL(url))
+    if (Router.sameOrigin(url)) {
+      return Page.loadContent(Router.getRelURL(url))
+    }
+    window.location.href = url
+    return true
   },
 
   setPage (page) {
@@ -129,8 +134,16 @@ const Router = {
       : {}
 
     const absURL = Router.getAbsURL(link)
+    const curState = window.history.state
 
-    window.history.replaceState(pushState, title, absURL)
+    // state should be null on first load, otherwise back button will lead to the same page
+    if (
+      !Router.FirstLoad &&
+            (!curState || !curState.link || (curState.link !== pushState.link))
+    ) {
+      window.history.pushState(pushState, title, absURL)
+    }
+    Router.FirstLoad = false
 
     // set window title
     document.title = title
@@ -154,7 +167,26 @@ const Router = {
         })
       }
     })
+  },
+
+  popState (state = null) {
+    if (state && state.link) {
+      console.log(`${NAME}: [popstate] load`)
+
+      Router.openURL(state.link)
+    } else if (state && state.landing) {
+      console.log(`${NAME}: [popstate] go to landing`)
+
+      Router.openURL(state.landing)
+    } else {
+      console.warn(`${NAME}: [popstate] state is missing`)
+      console.log(state)
+    }
   }
 }
+
+window.addEventListener('popstate', (e) => {
+  Router.popState(window.history.state)
+})
 
 module.exports = Router
