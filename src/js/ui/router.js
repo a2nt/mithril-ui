@@ -3,6 +3,7 @@ const NAME = 'uiRouter'
 // const Events = require('../_events')
 const Page = require('./page')
 const getParents = require('../util/getParents')
+const scrollOptions = { behavior: 'smooth', block: 'end', inline: 'nearest' }
 
 const Router = {
   FirstLoad: true,
@@ -49,7 +50,7 @@ const Router = {
 
       const target = document.querySelector(urlObj.hash)
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+        target.scrollIntoView(scrollOptions)
       }
 
       return true
@@ -178,6 +179,12 @@ const Router = {
     // reset focus
     if (document.activeElement instanceof window.HTMLElement) {
       document.activeElement.blur()
+    }
+
+    // scroll to top
+    const target = document.getElementById('Logo')
+    if (target) {
+      target.scrollIntoView(scrollOptions)
     }
   },
 
