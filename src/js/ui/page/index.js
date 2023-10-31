@@ -49,6 +49,10 @@ const Page = {
         )
 
         window.app.Router.removeActiveState()
+
+        // TODO: load not found page using GraphQL
+        // redirect to not found
+        window.location.href = '/page-not-found/'
         return
       }
 

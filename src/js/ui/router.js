@@ -106,7 +106,7 @@ const Router = {
   },
 
   isFormResponse () {
-    return document.location.search.includes('SecurityID') || Router.requestMethod() === 'POST'
+    return document.location.search.includes('SecurityID') || Router.requestMethod() === 'POST' || document.location.pathname.match('element/([0-9]+)/([A-z]+)')
   },
 
   openURL: (url) => {
@@ -185,6 +185,15 @@ const Router = {
     const target = document.getElementById('Logo')
     if (target) {
       target.scrollIntoView(scrollOptions)
+    }
+
+    // close mobile dropdowns
+    document.querySelectorAll('.navbar-toggler[aria-expanded="true"]').forEach((el) => { el.click() })
+
+    // close search bar
+    const searchBar = document.querySelector('#SearchFormContainer')
+    if (searchBar) {
+      searchBar.classList.remove('show')
     }
   },
 
