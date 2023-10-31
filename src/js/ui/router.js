@@ -61,7 +61,16 @@ const Router = {
       e.preventDefault()
 
       console.log(`${NAME} > linkClick: local URL`)
+
       el.classList.add('loading')
+      Router.setNavParentClasses(el, 'loading')
+      if (el.classList.contains('stretched-link')) {
+        const parent = el.parentElement
+        if (parent.classList.contains('element')) {
+          parent.classList.add('loading')
+        }
+      }
+
       return Router.openURL(url)
     }
 
@@ -154,6 +163,18 @@ const Router = {
     Router.setActiveState(link)
   },
 
+  // set nav parent classes
+  setNavParentClasses (el, className) {
+    // activate nav sections
+    if (el.classList.contains('nav-link')) {
+      getParents(el, '.nav-item').forEach((navEl) => {
+        navEl.querySelectorAll(':scope > .nav-link').forEach((navLink) => {
+          navLink.classList.add(className)
+        })
+      })
+    }
+  },
+
   // set active links
   setActiveState (link) {
     document.querySelectorAll(`a[href="${link}"],.a[data-href="${link}"]`).forEach((el) => {
@@ -161,18 +182,21 @@ const Router = {
 
       // activate nav sections
       if (el.classList.contains('nav-link')) {
-        getParents(el, '.nav-item').forEach((navEl) => {
-          const navLink = navEl.querySelector(':scope > .nav-link')
-          if (navLink) {
-            navLink.classList.add('section')
-          }
-        })
+        Router.setNavParentClasses(el, 'section')
       }
     })
+
+    // scroll to top
+    setTimeout(() => {
+      const target = document.getElementById('TopAnchor')
+      if (target) {
+        target.scrollIntoView(scrollOptions)
+      }
+    }, 500)
   },
 
   removeActiveState () {
-    document.querySelectorAll('a,.a').forEach((el) => {
+    document.querySelectorAll('a,.a,.nav-link,.element').forEach((el) => {
       el.classList.remove('active', 'loading', 'section')
     })
 
@@ -181,17 +205,11 @@ const Router = {
       document.activeElement.blur()
     }
 
-    // scroll to top
-    const target = document.getElementById('Logo')
-    if (target) {
-      target.scrollIntoView(scrollOptions)
-    }
-
     // close mobile dropdowns
     document.querySelectorAll('.navbar-toggler[aria-expanded="true"]').forEach((el) => { el.click() })
 
     // close search bar
-    const searchBar = document.querySelector('#SearchFormContainer')
+    const searchBar = document.getElementById('SearchFormContainer')
     if (searchBar) {
       searchBar.classList.remove('show')
     }

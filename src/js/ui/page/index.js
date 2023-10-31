@@ -52,7 +52,7 @@ const Page = {
 
         // TODO: load not found page using GraphQL
         // redirect to not found
-        window.location.href = '/page-not-found/'
+        // window.location.href = '/page-not-found/'
         return
       }
 
