@@ -43,7 +43,7 @@ const Page = {
         Page.content = (
           <div class='elemental-area'>
             <div class='element elemen--not-found'>
-              <div class='element__container container'>The page is not found</div>
+              <div class='element__container container'>Server Error</div>
             </div>
           </div>
         )
@@ -56,10 +56,10 @@ const Page = {
         return
       }
 
-      Page.title = loaded.title
+      Page.title = loaded.title ?? window.document.title
       Page.id = loaded.id
-      Page.link = loaded.link
-      Page.requestlink = loaded.RequestLink
+      Page.link = loaded.link ?? '/'
+      Page.requestlink = loaded.RequestLink ?? '/'
       Page.CSSClass = loaded.CSSClass
       Page.Resources = loaded.Resources
 

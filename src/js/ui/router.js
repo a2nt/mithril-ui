@@ -149,7 +149,7 @@ const Router = {
     // state should be null on first load, otherwise back button will lead to the same page
     if (
       !Router.FirstLoad &&
-            (!curState || !curState.link || (curState.link !== pushState.link))
+      (!curState || !curState.link || (curState.link !== pushState.link))
     ) {
       window.history.pushState(pushState, title, absURL)
     }
