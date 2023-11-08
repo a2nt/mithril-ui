@@ -54,6 +54,11 @@ const Router = {
       }
 
       return true
+    } else {
+      const target = document.getElementById('TopAnchor')
+      if (target) {
+        target.scrollIntoView(scrollOptions)
+      }
     }
 
     // local URL
@@ -105,8 +110,8 @@ const Router = {
 
   getRelURL (url) {
     /* if (Router.isAbsURL(url)) {
-                        return new URL(url, document.location.origin).pathname
-                    } */
+                            return new URL(url, document.location.origin).pathname
+                        } */
     return new URL(url, document.location.origin).pathname
   },
 
@@ -149,7 +154,7 @@ const Router = {
     // state should be null on first load, otherwise back button will lead to the same page
     if (
       !Router.FirstLoad &&
-      (!curState || !curState.link || (curState.link !== pushState.link))
+            (!curState || !curState.link || (curState.link !== pushState.link))
     ) {
       window.history.pushState(pushState, title, absURL)
     }
@@ -185,6 +190,12 @@ const Router = {
         Router.setNavParentClasses(el, 'section')
       }
     })
+
+    // hide loading spinner
+    const spinner = document.getElementById('PageLoading')
+    if (spinner) {
+      spinner.classList.add('d-none')
+    }
 
     // scroll to top
     setTimeout(() => {
