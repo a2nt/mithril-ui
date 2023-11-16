@@ -11,6 +11,12 @@ module.exports = {
     } else {
       console.log(`${NAME}: Page is form response, stop page content loading`)
       window.app.Router.initLinks()
+
+      // hide loading spinner
+      const spinner = document.getElementById('PageLoading')
+      if (spinner) {
+        spinner.classList.add('d-none')
+      }
     }
   },
   onupdate: async () => {
