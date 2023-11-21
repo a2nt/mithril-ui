@@ -9,7 +9,7 @@ const Defaults = {
   id: 0,
   link: '/',
   title: 'Loading ...',
-  content: '',
+  //content: '',
   CSSClass: 'loading'
 }
 
@@ -26,6 +26,8 @@ const Page = {
     Object.keys(Defaults).forEach(k => {
       Page[k] = Defaults[k]
     })
+
+    m.redraw()
 
     try {
       const resp = await GraphQL.request({
