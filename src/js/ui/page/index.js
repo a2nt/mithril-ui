@@ -9,7 +9,7 @@ const Defaults = {
   id: 0,
   link: '/',
   title: 'Loading ...',
-  //content: '',
+  // content: '',
   CSSClass: 'loading'
 }
 
