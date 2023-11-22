@@ -74,7 +74,6 @@ const Page = {
       window.app.Router.setPage(Page)
 
       console.timeEnd(`${NAME} > loadContent`)
-
     } catch (error) {
       console.error(`${NAME}: loadContent > FAILED`)
       console.error(error)
@@ -102,8 +101,6 @@ const Page = {
           )
         )
       }))
-
-      return
     }
   }
 }
