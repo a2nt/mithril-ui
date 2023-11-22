@@ -16,6 +16,9 @@ const Defaults = {
 const Page = {
   ...Defaults,
   loadContent: async (link) => {
+    console.log(`${NAME} > loadContent: start ${link}`)
+    console.time(`${NAME} > loadContent`)
+
     // legacy code compatibility: clean predefined content (ex. Form Submission)
     const predefined = document.querySelector('#MainContent>.main-content')
     if (predefined) {
@@ -35,9 +38,9 @@ const Page = {
         query: queries.byLink
       })
 
-      const loaded = resp.data.readOnePage
+      const loaded = await resp.data.readOnePage
 
-      console.log(`${NAME}: loadedContent: ${link}`)
+      console.log(`${NAME} > loadContent: done`)
 
       if (!loaded) {
         console.warn(`${NAME}: loadContent: ${link} > NOT FOUND`)
@@ -55,6 +58,8 @@ const Page = {
         // TODO: load not found page using GraphQL
         // redirect to not found
         // window.location.href = '/page-not-found/'
+
+        console.timeEnd(`${NAME} > loadContent`)
         return
       }
 
@@ -62,31 +67,43 @@ const Page = {
       Page.id = loaded.id
       Page.link = loaded.link ?? '/'
       Page.requestlink = loaded.RequestLink ?? '/'
-      Page.CSSClass = loaded.CSSClass
+      Page.CSSClass = loaded.CSSClass + ' loaded'
       Page.Resources = loaded.Resources
 
-      // display template content or parse elements
-      if (loaded.MainContent) {
-        Page.content = await m.trust(loaded.MainContent)
-      } else if (loaded.elementalArea) {
-        Page.content = await m('.elemental-area', loaded.elementalArea.elements.map((el) => {
-          const className = el.className.replaceAll('\\', '__').toLowerCase()
-          return m(
-            'div',
-            { id: el.id, class: 'element ' + className },
-            m('.element__container.container',
-              m.trust(el.forTemplate)
-            )
-          )
-        }))
-      }
-
+      Page.renderPage(loaded)
       window.app.Router.setPage(Page)
+
+      console.timeEnd(`${NAME} > loadContent`)
+
     } catch (error) {
       console.error(`${NAME}: loadContent > FAILED`)
       console.error(error)
 
       Page.title = 'Loading Failed!'
+      console.timeEnd(`${NAME} > loadContent`)
+    }
+  },
+
+  renderPage: (loaded) => {
+    // display template content or parse elements
+    if (loaded.MainContent) {
+      Page.content = m.trust(loaded.MainContent)
+      return
+    }
+
+    if (loaded.elementalArea) {
+      Page.content = m('.elemental-area', loaded.elementalArea.elements.map((el) => {
+        const className = el.className.replaceAll('\\', '__').toLowerCase()
+        return m(
+          'div',
+          { id: el.id, class: 'element ' + className },
+          m('.element__container.container',
+            m.trust(el.forTemplate)
+          )
+        )
+      }))
+
+      return
     }
   }
 }
