@@ -10,12 +10,15 @@ window.app.Events = Events.default
 window.app.Router = Router
 window.app.Page = Page
 
-window.addEventListener(`${Events.DOMLOADED}`, () => {
-  console.log(`${NAME}: Router.initLinks`)
-  Router.initLinks()
-})
+const MainContentContainer = document.getElementById('MainContent')
+if (!MainContentContainer || !MainContentContainer.dataset['legacy']) {
+  window.addEventListener(`${Events.DOMLOADED}`, () => {
+    console.log(`${NAME}: Router.initLinks`)
+    Router.initLinks()
+  })
 
-window.addEventListener(`${Events.AJAX}`, () => {
-  console.log(`${NAME}: Router.initLinks`)
-  Router.initLinks()
-})
+  window.addEventListener(`${Events.AJAX}`, () => {
+    console.log(`${NAME}: Router.initLinks`)
+    Router.initLinks()
+  })
+}
