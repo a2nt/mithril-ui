@@ -11,7 +11,7 @@ window.app.Router = Router
 window.app.Page = Page
 
 const MainContentContainer = document.getElementById('MainContent')
-if (!MainContentContainer || !MainContentContainer.dataset['legacy']) {
+if (!MainContentContainer || !MainContentContainer.dataset.legacy) {
   window.addEventListener(`${Events.DOMLOADED}`, () => {
     console.log(`${NAME}: Router.initLinks`)
     Router.initLinks()
