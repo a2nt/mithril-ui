@@ -55,9 +55,8 @@ const Page = {
 
         window.app.Router.removeActiveState()
 
-        // TODO: load not found page using GraphQL
-        // redirect to not found
-        // window.location.href = '/page-not-found/'
+        // redirect on failure
+        window.location.href = link
 
         console.timeEnd(`${NAME} > loadContent`)
         return

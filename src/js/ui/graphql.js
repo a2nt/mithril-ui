@@ -10,7 +10,7 @@ const GraphQL = {
     const res = await m.request({
       url: options.url,
       method: 'POST',
-      body: body
+      body
     })
 
     if (res.errors) {
@@ -18,11 +18,6 @@ const GraphQL = {
       res.errors.forEach((e) => {
         console.error(e.message)
       })
-
-      // redirect on failure
-      if (typeof body.variables !== 'undefined' && typeof body.variables.url !== 'undefined') {
-        window.location.href = body.variables.url
-      }
     }
 
     return res
