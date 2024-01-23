@@ -24,7 +24,7 @@ module.exports = {
 
     if (Page.Resources) {
       // load extra page scripts
-      const scripts = JSON.parse(Page.Resources)
+      const scripts = Array.isArray(Page.Resources) ? Page.Resources : JSON.parse(Page.Resources)
 
       const promises = scripts.map(loadResource)
       await Promise.all(promises)

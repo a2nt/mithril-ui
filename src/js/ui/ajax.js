@@ -1,16 +1,21 @@
-const NAME = 'uiGraphql'
+const NAME = 'uiAjax'
 
 const m = require("mithril") // eslint-disable-line
 const options = {
-  url: '/graphql/'
+  withCredentials: true,
+  params: {
+    ajax: '1'
+  },
+  headers: {
+    HTTP_X_REQUESTED_WITH: 'XMLHttpRequest'
+  }
 }
 
-const GraphQL = {
-  request: async (body) => {
+const AJAX = {
+  request: async (opts) => {
     const res = await m.request({
-      url: options.url,
-      method: 'POST',
-      body
+      ...options,
+      ...opts
     })
 
     if (res.errors) {
@@ -20,8 +25,8 @@ const GraphQL = {
       })
     }
 
-    return await res.data.readOnePage
+    return await res
   }
 }
 
-module.exports = GraphQL
+module.exports = AJAX

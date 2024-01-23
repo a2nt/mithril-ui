@@ -2,8 +2,10 @@ const NAME = 'uiPage'
 
 const m = require("mithril") // eslint-disable-line
 
-const queries = require('../queries/page')
-const GraphQL = require('../graphql')
+// const queries = require('../queries/page')
+// const GraphQL = require('../graphql')
+
+const AJAX = require('../ajax')
 
 const Defaults = {
   id: 0,
@@ -33,12 +35,16 @@ const Page = {
     m.redraw()
 
     try {
-      const resp = await GraphQL.request({
+      /* const resp = await GraphQL.request({
         variables: { url: link },
         query: queries.byLink
+      }) */
+      const resp = await AJAX.request({
+        url: link,
+        method: 'GET'
       })
 
-      const loaded = await resp.data.readOnePage
+      const loaded = resp
 
       console.log(`${NAME} > loadContent: done`)
 
@@ -62,9 +68,9 @@ const Page = {
         return
       }
 
-      Page.title = loaded.title ?? window.document.title
-      Page.id = loaded.id
-      Page.link = loaded.link ?? '/'
+      Page.title = loaded.Title ?? window.document.title
+      Page.id = loaded.ID
+      Page.link = loaded.Link ?? '/'
       Page.requestlink = loaded.RequestLink ?? '/'
       Page.CSSClass = loaded.CSSClass + ' loaded'
       Page.Resources = loaded.Resources
