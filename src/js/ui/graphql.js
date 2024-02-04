@@ -13,7 +13,7 @@ const GraphQL = {
       body
     })
 
-    if (res.errors) {
+    if (res && res.errors) {
       console.error(`${NAME} > request: Error`)
       res.errors.forEach((e) => {
         console.error(e.message)
