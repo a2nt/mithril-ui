@@ -3,185 +3,158 @@
     {
       "chunks": {
         "byName": {
-          "HtmlWebpackPlugin_0-/mnt/data/srv/dist/repositories/mithril-ui/node_modules/.pnpm/html-webpack-plugin@5.6.0_webpack@5.89.0/node_modules/html-webpack-plugin/lib/loader.js!/mnt/data/srv/dist/repositories/mithril-ui/src/index.html": 530
+          "HtmlWebpackPlugin_0-/mnt/data/srv/dist/repositories/mithril-ui/node_modules/.pnpm/html-webpack-plugin@5.6.0_webpack@5.91.0/node_modules/html-webpack-plugin/lib/loader.js!/mnt/data/srv/dist/repositories/mithril-ui/src/index.html": 103
         },
         "bySource": {
-          "0 HtmlWebpackPlugin_0-/mnt/data/srv/dist/repositories/mithril-ui/node_modules/.pnpm/html-webpack-plugin@5.6.0_webpack@5.89.0/node_modules/html-webpack-plugin/lib/loader.js!/mnt/data/srv/dist/repositories/mithril-ui/src/index.html": 530
+          "0 HtmlWebpackPlugin_0-/mnt/data/srv/dist/repositories/mithril-ui/node_modules/.pnpm/html-webpack-plugin@5.6.0_webpack@5.91.0/node_modules/html-webpack-plugin/lib/loader.js!/mnt/data/srv/dist/repositories/mithril-ui/src/index.html": 103
         },
         "usedIds": [
-          530
+          103
         ]
       },
       "modules": {
         "byIdentifier": {
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./node_modules/.pnpm/@a2nt+meta-lightbox-js@4.2.8/node_modules/@a2nt/meta-lightbox-js/src/html/meta-lightbox.html": 57,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Elements/Accordion.html": 558,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Elements/Content.html": 477,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Elements/ElementsList.html": 156,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Elements/Map.html": 366,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/First.html": 326,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Footer.html": 152,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Head.html": 490,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Last.html": 85,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Navigation.html": 411,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Slider.html": 615,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/_components/Alerts.html": 684,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/_components/Flyout.html": 31,
-          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/_components/LoadingSpinner.html": 965,
-          "../node_modules/.pnpm/img-optimize-loader@1.0.7_file-loader@6.2.0_webpack@5.89.0/node_modules/img-optimize-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/img/logo.svg": 805,
-          "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/runtime/getUrl.js": 125,
-          "./node_modules/.pnpm/html-webpack-plugin@5.6.0_webpack@5.89.0/node_modules/html-webpack-plugin/lib/loader.js!./src/index.html": 463,
-          "javascript/esm|data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;": 163
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./node_modules/.pnpm/@a2nt+meta-lightbox-js@4.2.8/node_modules/@a2nt/meta-lightbox-js/src/html/meta-lightbox.html": 1,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Elements/Accordion.html": 224,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Elements/Content.html": 595,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Elements/ElementsList.html": 609,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Elements/Map.html": 168,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/First.html": 204,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Footer.html": 23,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Head.html": 658,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Last.html": 4,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Navigation.html": 618,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/Slider.html": 701,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/_components/Alerts.html": 409,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/_components/Flyout.html": 361,
+          "../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/cjs.js!./src/html/_components/LoadingSpinner.html": 271,
+          "../node_modules/.pnpm/img-optimize-loader@1.0.7_file-loader@6.2.0_webpack@5.89.0/node_modules/img-optimize-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/img/logo.svg": 628,
+          "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!../node_modules/.pnpm/html-loader@4.2.0_webpack@5.89.0/node_modules/html-loader/dist/runtime/getUrl.js": 801,
+          "./node_modules/.pnpm/html-webpack-plugin@5.6.0_webpack@5.91.0/node_modules/html-webpack-plugin/lib/loader.js!./src/index.html": 700,
+          "javascript/esm|data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;": 682
         },
         "usedIds": [
-          31,
-          57,
-          85,
-          125,
-          152,
-          156,
-          163,
-          326,
-          366,
-          411,
-          463,
-          477,
-          490,
-          558,
-          615,
-          684,
-          805,
-          965
+          1,
+          4,
+          23,
+          168,
+          204,
+          224,
+          271,
+          361,
+          409,
+          595,
+          609,
+          618,
+          628,
+          658,
+          682,
+          700,
+          701,
+          801
         ]
       }
     }
   ],
   "chunks": {
     "byName": {
-      "app": 143
+      "app": 524
     },
     "bySource": {
-      "0 app": 143
+      "0 app": 524
     },
     "usedIds": [
-      143
+      524
     ]
   },
-  "mini-css-extract-plugin /mnt/data/srv/dist/repositories/node_modules/.pnpm/css-loader@6.9.0_webpack@5.89.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/.pnpm/sass-loader@14.0.0_sass@1.70.0_webpack@5.89.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/scss/app.scss": [
-    {
-      "chunks": {
-        "byName": {
-          "child": 396
-        },
-        "bySource": {
-          "0 child": 396
-        },
-        "usedIds": [
-          396
-        ]
-      },
-      "modules": {
-        "byIdentifier": {
-          "../node_modules/.pnpm/css-loader@6.9.0_webpack@5.89.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/.pnpm/sass-loader@14.0.0_sass@1.70.0_webpack@5.89.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/scss/app.scss": 242,
-          "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!../node_modules/.pnpm/css-loader@6.9.0_webpack@5.89.0/node_modules/css-loader/dist/runtime/api.js": 57,
-          "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!../node_modules/.pnpm/css-loader@6.9.0_webpack@5.89.0/node_modules/css-loader/dist/runtime/sourceMaps.js": 461
-        },
-        "usedIds": [
-          57,
-          242,
-          461
-        ]
-      }
-    }
-  ],
   "modules": {
     "byIdentifier": {
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/api/mount-redraw.js": 923,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/api/router.js": 409,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/hyperscript.js": 210,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/index.js": 592,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/mount-redraw.js": 421,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/pathname/build.js": 466,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/pathname/compileTemplate.js": 435,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/pathname/parse.js": 765,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/promise/polyfill.js": 209,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/promise/promise.js": 964,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/querystring/build.js": 872,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/querystring/parse.js": 919,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render.js": 683,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/fragment.js": 195,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/hyperscript.js": 580,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/hyperscriptVnode.js": 866,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/render.js": 8,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/trust.js": 604,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/vnode.js": 75,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/request.js": 95,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/request/request.js": 499,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/route.js": 962,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/util/assign.js": 205,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/util/censor.js": 94,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/util/hasOwn.js": 402,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/_events.js": 167,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/app.js": 652,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/layout/content.js": 733,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/layout/footer.js": 338,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/layout/header.js": 388,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/layout/index.js": 311,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/ajax.js": 33,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/graphql.js": 373,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/index.js": 602,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/nav/index.js": 619,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/nav/tpl.js": 126,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/page/index.js": 949,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/page/resources.js": 783,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/page/tpl.js": 142,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/queries/page.js": 877,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/router.js": 689,
-      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/util/getParents.js": 392
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/api/mount-redraw.js": 782,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/api/router.js": 744,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/hyperscript.js": 863,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/index.js": 850,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/mount-redraw.js": 627,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/pathname/build.js": 967,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/pathname/compileTemplate.js": 40,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/pathname/parse.js": 148,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/promise/polyfill.js": 129,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/promise/promise.js": 525,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/querystring/build.js": 556,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/querystring/parse.js": 119,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render.js": 196,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/fragment.js": 428,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/hyperscript.js": 778,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/hyperscriptVnode.js": 870,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/render.js": 127,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/trust.js": 861,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/render/vnode.js": 577,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/request.js": 995,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/request/request.js": 297,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/route.js": 711,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/util/assign.js": 138,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/util/censor.js": 153,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/util/hasOwn.js": 47,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/_events.js": 235,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/app.js": 776,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/layout/content.js": 211,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/layout/footer.js": 287,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/layout/header.js": 45,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/layout/index.js": 74,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/ajax.js": 938,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/graphql.js": 783,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/index.js": 758,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/nav/index.js": 712,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/nav/tpl.js": 660,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/page/index.js": 172,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/page/resources.js": 561,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/page/tpl.js": 331,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/queries/page.js": 338,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/ui/router.js": 421,
+      "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./src/js/util/getParents.js": 23
     },
     "usedIds": [
-      8,
-      33,
-      75,
-      94,
-      95,
-      126,
-      142,
-      167,
-      195,
-      205,
-      209,
-      210,
-      311,
+      23,
+      40,
+      45,
+      47,
+      74,
+      119,
+      127,
+      129,
+      138,
+      148,
+      153,
+      172,
+      196,
+      211,
+      235,
+      287,
+      297,
+      331,
       338,
-      373,
-      388,
-      392,
-      402,
-      409,
       421,
-      435,
-      466,
-      499,
-      580,
-      592,
-      602,
-      604,
-      619,
-      652,
-      683,
-      689,
-      733,
-      765,
+      428,
+      525,
+      556,
+      561,
+      577,
+      627,
+      660,
+      711,
+      712,
+      744,
+      758,
+      776,
+      778,
+      782,
       783,
-      866,
-      872,
-      877,
-      919,
-      923,
-      949,
-      962,
-      964
+      850,
+      861,
+      863,
+      870,
+      938,
+      967,
+      995
     ]
   }
 }

@@ -8,7 +8,7 @@ const scrollOptions = { behavior: 'smooth', block: 'start', inline: 'nearest' }
 const Router = {
   FirstLoad: true,
   initLinks () {
-    document.querySelectorAll('a:not(.legacy)').forEach((el) => {
+    document.querySelectorAll('a:not(.legacy,.download)').forEach((el) => {
       if (el.dataset[NAME]) {
         return
       }
@@ -41,10 +41,10 @@ const Router = {
     // scroll to hash url
     if (
       urlObj.hash &&
-            (
-              !urlObj.pathname || urlObj.pathname === '/graphql/' ||
-                (urlObj.hostname === document.location.hostname && urlObj.pathname === document.location.pathname)
-            )
+      (
+        !urlObj.pathname || urlObj.pathname === '/graphql/' ||
+        (urlObj.hostname === document.location.hostname && urlObj.pathname === document.location.pathname)
+      )
     ) {
       e.preventDefault()
       console.log(`${NAME} > linkClick: hash URL`)
@@ -170,7 +170,7 @@ const Router = {
     // state should be null on first load, otherwise back button will lead to the same page
     if (
       !Router.FirstLoad &&
-            (!curState || !curState.link || (curState.link !== pushState.link))
+      (!curState || !curState.link || (curState.link !== pushState.link))
     ) {
       window.history.pushState(pushState, title, absURL)
     }
