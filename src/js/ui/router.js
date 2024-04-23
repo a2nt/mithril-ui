@@ -7,7 +7,7 @@ const scrollOptions = { behavior: 'smooth', block: 'start', inline: 'nearest' }
 
 const Router = {
   FirstLoad: true,
-  initLinks() {
+  initLinks () {
     document.querySelectorAll('a:not(.legacy,.download)').forEach((el) => {
       if (el.dataset[NAME]) {
         return
@@ -20,7 +20,7 @@ const Router = {
     })
   },
 
-  async linkClick(el, e) {
+  async linkClick (el, e) {
     console.time(`${NAME} > linkClick`)
 
     const link = el
@@ -60,9 +60,9 @@ const Router = {
 
     // same URL
     if (
-      urlObj.hostname === document.location.hostname
-      && urlObj.pathname === document.location.pathname
-      && urlObj.search === document.location.search
+      urlObj.hostname === document.location.hostname &&
+      urlObj.pathname === document.location.pathname &&
+      urlObj.search === document.location.search
     ) {
       e.preventDefault()
       console.log(`${NAME} > linkClick: same URL`)
@@ -103,7 +103,7 @@ const Router = {
     return true
   },
 
-  sameOrigin(uri) {
+  sameOrigin (uri) {
     const url = Router.getAbsURL(uri)
 
     const newURL = new URL(url)
@@ -116,18 +116,18 @@ const Router = {
     return true
   },
 
-  isAbsURL(url) {
+  isAbsURL (url) {
     return url.indexOf('://') > 0 || url.indexOf('//') === 0
   },
 
-  getAbsURL(url) {
+  getAbsURL (url) {
     if (!Router.isAbsURL(url)) {
       return new URL(url, document.location.origin).href
     }
     return url
   },
 
-  getRelURL(url) {
+  getRelURL (url) {
     /* if (Router.isAbsURL(url)) {
                                 return new URL(url, document.location.origin).pathname
                             } */
@@ -135,11 +135,11 @@ const Router = {
     return urlObj.pathname + urlObj.search
   },
 
-  requestMethod() {
+  requestMethod () {
     return document.querySelector('meta[name="http_method"]').getAttribute('content')
   },
 
-  isFormResponse() {
+  isFormResponse () {
     return document.location.search.includes('SecurityID') || Router.requestMethod() === 'POST' || document.location.pathname.match('element/([0-9]+)/([A-z]+)')
   },
 
@@ -152,21 +152,21 @@ const Router = {
     return true
   },
 
-  setPage(page) {
+  setPage (page) {
     Router.setLocation(page.title, page.link, page)
 
     // window.dispatchEvent(new Event(window.app.Events.LOADED))
     // window.dispatchEvent(new Event(window.app.Events.AJAX))
   },
 
-  setLocation(title, url, state) {
+  setLocation (title, url, state) {
     const link = state.requestlink ?? url
     const pushState = state
       ? {
-        id: state.id,
-        link,
-        title: state.title
-      }
+          id: state.id,
+          link,
+          title: state.title
+        }
       : {}
 
     const absURL = Router.getAbsURL(link)
@@ -190,7 +190,7 @@ const Router = {
   },
 
   // set nav parent classes
-  setNavParentClasses(el, className) {
+  setNavParentClasses (el, className) {
     // activate nav sections
     if (el.classList.contains('nav-link')) {
       getParents(el, '.nav-item').forEach((navEl) => {
@@ -202,7 +202,7 @@ const Router = {
   },
 
   // set active links
-  setActiveState(link) {
+  setActiveState (link) {
     document.querySelectorAll(`a[href="${link}"],.a[data-href="${link}"]`).forEach((el) => {
       el.classList.add('active')
 
@@ -233,7 +233,7 @@ const Router = {
         }, 500) */
   },
 
-  removeActiveState() {
+  removeActiveState () {
     document.querySelectorAll('a,.a,.nav-link,.element').forEach((el) => {
       el.classList.remove('active', 'loading', 'section')
     })
@@ -253,7 +253,7 @@ const Router = {
     }
   },
 
-  popState(state = null) {
+  popState (state = null) {
     if (state && state.link) {
       console.log(`${NAME}: [popstate] load`)
 
