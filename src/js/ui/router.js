@@ -275,10 +275,10 @@ window.addEventListener('popstate', (e) => {
 
 // bfcache
 window.addEventListener('pageshow', (e) => {
-    if (e.persisted) {
-        console.log(`${NAME}: This page was restored from the bfcache.`)
-        Router.openURL(window.location.href)
-    }
+  if (e.persisted) {
+    console.log(`${NAME}: This page was restored from the bfcache.`)
+    Router.openURL(window.location.href)
+  }
 })
 
 module.exports = Router
