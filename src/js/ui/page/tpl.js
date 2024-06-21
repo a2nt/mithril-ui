@@ -5,43 +5,54 @@ const Page = require('./index')
 const loadResource = require('./resources')
 
 module.exports = {
-  oninit: () => {
-    if (!window.app.Router.isFormResponse()) {
-      Page.loadContent(document.location.pathname)
-    } else {
-      console.log(`${NAME}: Page is form response, stop page content loading`)
-      window.app.Router.initLinks()
+    oninit: () => {
+        if (window.preloadedData) {
+            console.log(`${NAME}: render preloaded`)
 
-      // hide loading spinner
-      const spinner = document.getElementById('PageLoading')
-      if (spinner) {
-        spinner.classList.add('d-none')
-      }
+            Page.renderPage(window.preloadedData)
+            window.app.Router.setPage(Page)
+        } if (!window.app.Router.isFormResponse()) {
+            console.log(`${NAME}: load on init`)
+
+            // load content on init
+            Page.loadContent(document.location.pathname)
+        } else {
+            console.log(`${NAME}: Page is form response, stop page content loading`)
+
+            window.app.Router.initLinks()
+
+            // hide loading spinner
+            const spinner = document.getElementById('PageLoading')
+            if (spinner) {
+                spinner.classList.add('d-none')
+            }
+        }
+
+        window.preloadedData = null
+    },
+    onupdate: async () => {
+        window.app.Router.initLinks()
+
+        if (Page.Resources) {
+            // load extra page scripts
+            const scripts = Array.isArray(Page.Resources) ? Page.Resources : JSON.parse(Page.Resources)
+
+            const promises = scripts.map(loadResource)
+            await Promise.all(promises)
+        }
+
+        window.dispatchEvent(new Event(window.app.Events.AJAX))
+    },
+    view: () => {
+        return (
+            <main class={Page.CSSClass}>
+                <div class='element page-header-element'>
+                    <div class='element-container container'>
+                        <h1 class='page-header'>{Page.title}</h1>
+                    </div>
+                </div>
+                {Page.content}
+            </main>
+        )
     }
-  },
-  onupdate: async () => {
-    window.app.Router.initLinks()
-
-    if (Page.Resources) {
-      // load extra page scripts
-      const scripts = Array.isArray(Page.Resources) ? Page.Resources : JSON.parse(Page.Resources)
-
-      const promises = scripts.map(loadResource)
-      await Promise.all(promises)
-    }
-
-    window.dispatchEvent(new Event(window.app.Events.AJAX))
-  },
-  view: () => {
-    return (
-      <main class={Page.CSSClass}>
-        <div class='element page-header-element'>
-          <div class='element-container container'>
-            <h1 class='page-header'>{Page.title}</h1>
-          </div>
-        </div>
-        {Page.content}
-      </main>
-    )
-  }
 }
