@@ -6,7 +6,7 @@ const m = require("mithril") // eslint-disable-line
 // const GraphQL = require('../graphql')
 
 const AJAX = require('../ajax')
-//const { load } = require('js-yaml')
+// const { load } = require('js-yaml')
 
 const Defaults = {
   id: 0,
