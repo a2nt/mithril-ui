@@ -11,14 +11,16 @@ module.exports = {
 
       Page.renderPage(window.preloadedData)
       window.app.Router.setPage(Page)
-
       window.app.Router.initLinks()
+
+      window.preloadedData = null
     } else if (!window.app.Router.isFormResponse()) {
       console.log(`${NAME}: load on init`)
 
       // load content on init
       const prefetchURL = document.querySelector('link[rel="preload"][as="fetch"]')
       const link = prefetchURL ? prefetchURL.getAttribute('href') : document.location.pathname
+
       Page.loadContent(link)
     } else {
       console.log(`${NAME}: Page is form response, stop page content loading`)
