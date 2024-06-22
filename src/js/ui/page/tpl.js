@@ -13,8 +13,7 @@ module.exports = {
       window.app.Router.setPage(Page)
       setTimeout(() => {
         window.app.Router.initLinks()
-      }, 500);
-      
+      }, 500)
 
       window.preloadedData = null
     } else if (!window.app.Router.isFormResponse()) {
