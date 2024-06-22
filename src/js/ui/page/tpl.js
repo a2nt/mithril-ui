@@ -11,7 +11,10 @@ module.exports = {
 
       Page.renderPage(window.preloadedData)
       window.app.Router.setPage(Page)
-      window.app.Router.initLinks()
+      setTimeout(() => {
+        window.app.Router.initLinks()
+      }, 500);
+      
 
       window.preloadedData = null
     } else if (!window.app.Router.isFormResponse()) {
