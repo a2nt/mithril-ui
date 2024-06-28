@@ -12,7 +12,6 @@ module.exports = {
       Page.renderPage(window.preloadedData)
       window.app.Router.setPage(Page)
       setTimeout(() => {
-        window.app.Router.initLinks()
         window.dispatchEvent(new Event(window.app.Events.AJAX))
       }, 300)
 
@@ -40,8 +39,6 @@ module.exports = {
     window.preloadedData = null
   },
   onupdate: async () => {
-    window.app.Router.initLinks()
-
     if (Page.Resources) {
       // load extra page scripts
       const scripts = Array.isArray(Page.Resources) ? Page.Resources : JSON.parse(Page.Resources)

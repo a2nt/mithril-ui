@@ -88,9 +88,9 @@ const Router = {
     }
 
     /* const target = document.getElementById('TopAnchor')
-            if (target) {
-              target.scrollIntoView(scrollOptions)
-            } */
+                if (target) {
+                  target.scrollIntoView(scrollOptions)
+                } */
 
     // local URL
     if (!link.getAttribute('target') && Router.sameOrigin(url)) {
@@ -126,9 +126,11 @@ const Router = {
     const newURL = new URL(url)
     const currURL = new URL(window.location.href)
 
-    if (newURL.host !== currURL.host) return false
-    if (newURL.port !== currURL.port) return false
-    if (newURL.protocol !== currURL.protocol) return false
+    if (newURL.host !== currURL.host) {
+      return false
+    }
+    if (newURL.port !== currURL.port) { return false }
+    // if (newURL.protocol !== currURL.protocol) { return false }
 
     return true
   },
@@ -146,8 +148,8 @@ const Router = {
 
   getRelURL (url) {
     /* if (Router.isAbsURL(url)) {
-                                    return new URL(url, document.location.origin).pathname
-                                } */
+                                        return new URL(url, document.location.origin).pathname
+                                    } */
     const urlObj = new URL(url, document.location.origin)
     return urlObj.pathname + urlObj.search
   },
@@ -243,11 +245,11 @@ const Router = {
     })
 
     /* setTimeout(() => {
-              const target = document.getElementById('TopAnchor')
-              if (target) {
-                target.scrollIntoView(scrollOptions)
-              }
-            }, 500) */
+                  const target = document.getElementById('TopAnchor')
+                  if (target) {
+                    target.scrollIntoView(scrollOptions)
+                  }
+                }, 500) */
   },
 
   removeActiveState () {
@@ -296,6 +298,11 @@ window.addEventListener('pageshow', (e) => {
     console.log(`${NAME}: This page was restored from the bfcache.`)
     Router.openURL(window.location.href)
   }
+})
+
+// ajax
+window.addEventListener('ajax-load', (e) => {
+  window.app.Router.initLinks()
 })
 
 module.exports = Router
