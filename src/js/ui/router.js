@@ -117,6 +117,9 @@ const Router = {
     // external URL
     console.log(`${NAME} > linkClick: external URL`)
     console.timeEnd(`${NAME} > linkClick`)
+
+    window.open(url, '_blank')
+
     return true
   },
 
