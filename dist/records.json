@@ -67,33 +67,6 @@
       524
     ]
   },
-  "mini-css-extract-plugin /mnt/data/srv/dist/repositories/node_modules/.pnpm/css-loader@6.9.0_webpack@5.89.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/.pnpm/sass-loader@14.2.1_sass@1.75.0_webpack@5.91.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/scss/app.scss": [
-    {
-      "chunks": {
-        "byName": {
-          "child": 615
-        },
-        "bySource": {
-          "0 child": 615
-        },
-        "usedIds": [
-          615
-        ]
-      },
-      "modules": {
-        "byIdentifier": {
-          "../node_modules/.pnpm/css-loader@6.9.0_webpack@5.89.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/.pnpm/sass-loader@14.2.1_sass@1.75.0_webpack@5.91.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/scss/app.scss": 214,
-          "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!../node_modules/.pnpm/css-loader@6.9.0_webpack@5.89.0/node_modules/css-loader/dist/runtime/api.js": 455,
-          "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!../node_modules/.pnpm/css-loader@6.9.0_webpack@5.89.0/node_modules/css-loader/dist/runtime/sourceMaps.js": 793
-        },
-        "usedIds": [
-          214,
-          455,
-          793
-        ]
-      }
-    }
-  ],
   "modules": {
     "byIdentifier": {
       "./node_modules/.pnpm/@sucrase+webpack-loader@2.0.0_sucrase@3.35.0/node_modules/@sucrase/webpack-loader/dist/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/mithril@2.2.2/node_modules/mithril/api/mount-redraw.js": 782,
